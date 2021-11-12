@@ -37,8 +37,6 @@ export class NewProductoComponent implements OnInit {
     this.authService.getUserByUsername(this.tokenService.getUsername()).subscribe(
         data=>{
           this.usuario = data;
-          this.imagenUrl ="";
-          this.imagenId=""
         }
       )
   }

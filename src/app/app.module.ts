@@ -22,6 +22,7 @@ import { MenuComponent } from './menu/menu/menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdminListComponent } from './pages/admin-list/admin-list.component';
 import { interceptorProvider } from './interceptor/prod-interceptor.service';
+import { EquipoComponent } from './pages/equipo/equipo.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { interceptorProvider } from './interceptor/prod-interceptor.service';
     RegisterComponent,
     MenuComponent,
     AdminListComponent,
+    EquipoComponent,
   ],
   imports: [
     BrowserModule,

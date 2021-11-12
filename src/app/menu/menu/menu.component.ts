@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faList,faPlus,faUser,faPowerOff,faTable,faHome } from "@fortawesome/free-solid-svg-icons";
+import { faList,faPlus,faUser,faPowerOff,faTable,faHome,faUsers } from "@fortawesome/free-solid-svg-icons";
 import { TokenService } from 'src/app/services/token.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
   faPowerOff = faPowerOff;
   faTable=faTable;
   faHome=faHome;
+  faUsers=faUsers;
 
   isLogged = false;
   usuario = "";

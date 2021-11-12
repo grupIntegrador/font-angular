@@ -42,6 +42,9 @@
             <li class="nav-item">
                 <a class="nav-link negro" [routerLink]="['/lista']" routerLinkActive="router-link-active" ><fa-icon [icon]="faList"></fa-icon> productos</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link negro" [routerLink]="['/equipo']" routerLinkActive="router-link-active" ><fa-icon [icon]="faUsers"></fa-icon> Equipo</a>
+              </li>
               <li class="nav-item" *ngIf="isAdmin" >
                 <a class="nav-link negro" [routerLink]="['/admin-list']" routerLinkActive="router-link-active" ><fa-icon [icon]="faTable"></fa-icon> productos-admin</a>
               </li>
