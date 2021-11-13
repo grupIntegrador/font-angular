@@ -23,6 +23,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdminListComponent } from './pages/admin-list/admin-list.component';
 import { interceptorProvider } from './interceptor/prod-interceptor.service';
 import { EquipoComponent } from './pages/equipo/equipo.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { EquipoComponent } from './pages/equipo/equipo.component';
     MenuComponent,
     AdminListComponent,
     EquipoComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
