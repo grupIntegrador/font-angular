@@ -7,6 +7,7 @@ import { AdminListComponent } from './pages/admin-list/admin-list.component';
 import { EquipoComponent } from './pages/equipo/equipo.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NewProductoComponent } from './pages/new-producto/new-producto.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { UpdateProductoComponent } from './pages/update-producto/update-producto.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:"nuevo",component:NewProductoComponent,canActivate:[guard],data:{expectedRol:['admin']}},
   {path:"update/:id",component:UpdateProductoComponent,canActivate:[guard],data:{expectedRol:['admin']}},
   {path:"equipo",component:EquipoComponent},
+  {path:"nosotros",component:NosotrosComponent},
   {path:"**",redirectTo:"",pathMatch:'full'},
 ];
 

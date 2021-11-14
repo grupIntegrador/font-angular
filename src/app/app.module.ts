@@ -24,6 +24,7 @@ import { AdminListComponent } from './pages/admin-list/admin-list.component';
 import { interceptorProvider } from './interceptor/prod-interceptor.service';
 import { EquipoComponent } from './pages/equipo/equipo.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     AdminListComponent,
     EquipoComponent,
     FooterComponent,
+    NosotrosComponent,
   ],
   imports: [
     BrowserModule,
