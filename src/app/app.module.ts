@@ -25,6 +25,8 @@ import { interceptorProvider } from './interceptor/prod-interceptor.service';
 import { EquipoComponent } from './pages/equipo/equipo.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { ContactanosComponent } from './pages/contactanos/contactanos.component';
+import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
     EquipoComponent,
     FooterComponent,
     NosotrosComponent,
+    ContactanosComponent,
+    ConfirmacionComponent,
   ],
   imports: [
     BrowserModule,
