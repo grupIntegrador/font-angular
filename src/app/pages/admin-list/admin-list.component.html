@@ -19,7 +19,7 @@
           <td>{{producto.material}}</td>
           <td>{{producto.cantidad}}</td>
           <td>${{producto.precio}}</td>
-          <td><button class="btn btn-outline-warning"><fa-icon [icon]="FaEdit"></fa-icon>Editar</button></td>
+          <td><button routerLink="/update/{{producto.id}}"   class="btn btn-outline-warning"><fa-icon [icon]="FaEdit"></fa-icon>Editar</button></td>
           <td><button (click)="borrar(producto.id)"  class="btn btn-outline-danger"><fa-icon [icon]="FaTrashAlt"></fa-icon>Eliminar</button></td>
         </tr>
       </tbody>
