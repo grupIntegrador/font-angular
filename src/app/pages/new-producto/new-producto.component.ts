@@ -3,7 +3,6 @@ import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 import { ToastrService } from "ngx-toastr";
 import { Router } from '@angular/router';
-import { NuevoUsuario } from 'src/app/models/nuevo-usuario';
 import { TokenService } from 'src/app/services/token.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Usuario } from 'src/app/models/usuario';
@@ -15,13 +14,12 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class NewProductoComponent implements OnInit {
 
-    nombre: string = "";
-    descripcion: string ="";
-    imagenUrl: string="";
-    imagenId: string="";
-    material : string="";
-    precio : number= 0;
-    cantidad : number = 0; 
+    nombre: string = "botella";
+    descripcion: string ="botella transparente";
+    imagenUrl: string="http://www.globalplastic.pe/images/products/Botellas/Botellas_Alcoholera/Bot-alcoholera-125ml.png";
+    material : string="PET";
+    precio : number= 0.5;
+    cantidad : number = 1; 
     usuario !:Usuario;
 
   constructor(private productoService:ProductoService,
@@ -46,7 +44,6 @@ export class NewProductoComponent implements OnInit {
       this.nombre,
       this.descripcion,
       this.imagenUrl,
-      this.imagenId,
       this.material,
       this.precio,
       this.cantidad,

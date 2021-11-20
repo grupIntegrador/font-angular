@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { NuevoUsuario } from 'src/app/models/nuevo-usuario';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -25,7 +26,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private tokenService:TokenService,
     private authService:AuthService,
-    private router:Router
+    private router:Router,
+    private toaster:ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -52,9 +54,13 @@ export class RegisterComponent implements OnInit {
           this.isLogged=false;
           this.isRegisterFail=true;
           if(!err.error.message){
-            this.errSMS=err.error.mensaje;
+            this.toaster.error(err.error.mensaje,'Fail',{
+              timeOut:3000
+            })
           }else{
-            this.errSMS=err.error.message;
+            this.toaster.error(err.error.message,'Fail',{
+              timeOut:3000
+            })
           }        
         }
       )

@@ -5,6 +5,7 @@ import { LoginUsuario } from 'src/app/models/login-usuario';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private tokenService:TokenService,
     private authService:AuthService,
-    private router:Router
+    private router:Router,
+    private toaster:ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -56,9 +58,13 @@ export class LoginComponent implements OnInit {
         this.isLogged=false;
         this.isLoginFail=true;
         if(!err.error.message){
-          this.errSMS=err.error.mensaje;
+          this.toaster.error(err.error.mensaje,'Fail',{
+            timeOut:3000
+          })
         }else{
-          this.errSMS=err.error.message;
+          this.toaster.error(err.error.mensaje,'Fail',{
+            timeOut:3000
+          })
         }        
       }
     )

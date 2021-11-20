@@ -15,12 +15,8 @@
                         <input required [(ngModel)]="descripcion" name="descripcion" type="text" class="form-control"  placeholder="botella transparente">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Imagen del producto</label>
+                        <label class="form-label">Url imagen del producto</label>
                         <input required [(ngModel)]="imagenUrl" name="imagenUrl" class="form-control" type="text" >
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Imagen ID</label>
-                        <input required [(ngModel)]="imagenId" name="imagenId" class="form-control" type="text" >
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -32,8 +28,7 @@
                         <label class="form-label">Precio</label>
                         <div class="input-group">
                             <span class="input-group-text">$</span>
-                            <input required [(ngModel)]="precio" name="precio" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="200">
-                            <span class="input-group-text">.00</span>
+                            <input required [(ngModel)]="precio" name="precio" type="number" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="200">
                         </div>
                     </div>
                     <div class="mb-3">
