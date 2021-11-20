@@ -27,6 +27,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactanosComponent } from './pages/contactanos/contactanos.component';
 import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.component';
+import { PaymentComponent } from './pages/payment/payment.component';
+import { NgxStripeModule } from "ngx-stripe";
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.compone
     NosotrosComponent,
     ContactanosComponent,
     ConfirmacionComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.compone
     HttpClientModule,
     FormsModule,
     FontAwesomeModule,
+    NgxStripeModule.forRoot('pk_test_51Jn6ZQGynBxhAfGk7rZKOnrvvaQdoi7GLhXcAgaWkPyaAk034FCRF3zKY9Q26IH4AjuYp5Uvs40Ah2tuUyGUoXPU00LwQblDuG')
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],

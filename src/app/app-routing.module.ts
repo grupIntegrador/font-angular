@@ -13,6 +13,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { UpdateProductoComponent } from './pages/update-producto/update-producto.component';
+import { PaymentComponent } from './pages/payment/payment.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:"nuevo",component:NewProductoComponent,canActivate:[guard],data:{expectedRol:['admin']}},
   {path:"update/:id",component:UpdateProductoComponent,canActivate:[guard],data:{expectedRol:['admin']}},
   {path:"equipo",component:EquipoComponent},
+  {path:"payment",component:PaymentComponent},
   {path:"contactanos",component:ContactanosComponent},
   {path:"confirmacion",component:ConfirmacionComponent},
   {path:"nosotros",component:NosotrosComponent},
