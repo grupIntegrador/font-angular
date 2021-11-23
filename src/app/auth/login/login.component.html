@@ -4,41 +4,39 @@
       <h2>session iniciado</h2>
     </div>
     <ng-template #loggedOut>
+    <div class="log2">
+    <div class="log">
       <div class="container d-flex justify-content-center">
         
           
           <div class="card-body "  >
             <form #f="ngForm" (ngSubmit)="onLogin()">
-              <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="500" height="1">
+              
               <h1 class="text-center h3 mb-3 fw-normal">Iniciar Session</h1><br>
             
               <div class="form-floating">
-                <label >Ingrese Correo Electronico</label>
-                <input [(ngModel)]="username" name="username" required type="text" class="form-control"  placeholder="username"><br>
+                <label >Ingrese Usuario</label>
+                <input [(ngModel)]="username" name="username" required type="text" class="form-control f1"  placeholder="username"><br>
                 
               </div>
               <div class="form-floating">
                 <label >Ingrese Contraseña</label>
-                <input [(ngModel)]="password" name="password" type="password" required class="form-control"  placeholder="Password"><br>
+                <input [(ngModel)]="password" name="password" type="password" required class="form-control f2"  placeholder="Password"><br>
                
               </div>
             
+              <button class="w-100 btn btn-lg bn"  type="submit">Ingresar</button>
               <div class="checkbox mb-3">
-                <label>
-                  <input  type="checkbox" value="remember-me"> Recordar<br>
-                </label>
+                
+                <br><p>¿No tienes un cuenta? <a [routerLink]="['/register']" routerLinkActive="router-link-active"> Registrate</a></p>
               </div>
-              <div class="checkbox mb-3">
-                <a [routerLink]="['/register']" routerLinkActive="router-link-active">¿No tienes un cuenta?</a>
-              </div>
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
-              <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
             </form>
             <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">
               Fallo en el login: {{errSMS}}
             </div>
           </div>
-        
-      </div>
+        </div>
+     </div>
+    </div>
     </ng-template>
   </div>
