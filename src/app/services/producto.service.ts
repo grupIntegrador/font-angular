@@ -8,7 +8,7 @@ import { Producto } from '../models/producto';
 })
 export class ProductoService {
 
-  productoUrl = 'http://localhost:8080/producto/'
+  productoUrl = 'https://plastic-antonys.herokuapp.com/producto/'
 
   constructor(private httpClient:HttpClient) { }
 

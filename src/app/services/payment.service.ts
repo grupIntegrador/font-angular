@@ -9,7 +9,7 @@ const cabecera = {headers: new HttpHeaders({'Content-Type':'application/json'})}
 })
 export class PaymentService {
 
-  stripeUrl = 'http://localhost:8080/stripe/'
+  stripeUrl = 'https://plastic-antonys.herokuapp.com/stripe/'
 
   constructor(private httpClient:HttpClient) { }
 

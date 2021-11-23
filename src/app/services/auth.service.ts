@@ -11,7 +11,7 @@ import { Usuario } from '../models/usuario';
 })
 export class AuthService {
 
-  authUrl = 'http://localhost:8080/auth/'
+  authUrl = 'https://plastic-antonys.herokuapp.com/auth/'
 
   constructor(private httpClient:HttpClient) { }
 
