@@ -8,24 +8,88 @@ body{
     max-height: 50vh;
 }
 
+.imagen-sl{
+    width: 25rem;
+    height: 20rem;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    color: rgb(216, 59, 106);
+}
+
 .button1{
     background-color: #D84727;
-    color: #fff;
+    color: white;
     border: none;
     height: 3em;
     padding: 0px 10px;
 }
+
+.button1:hover {
+    background: black;
+    color: #D84727;
+    transition: background-color 1s ease-out;
+} 
 
 .button2{
     border: 1px solid #D84727;
     background-color: transparent;
     height: 3em;
     width: 5em;
-    margin: 0px;
+    margin: 10px;
 }
+
+.button2:hover {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    transition: background-color 1s ease-out;
+} 
+
+.card{
+    margin: 10px;
+}
+
+.card-img-top{
+    width: 16rem;
+    height: 13rem;
+}
+
+h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+}
+
+.btn:hover{
+    background: black;
+    color: red;
+    transition: background-color 1s ease-out;
+}
+
+.button3{
+    border: 1px solid #D84727;
+    background-color: transparent;
+    color: #D84727;
+    height: 3em;
+    width: 7em;
+}
+
+.button3:hover {
+    border: 1px solid black;
+    background: black;
+    color: #D84727;
+    transition: background-color 1s ease-out;
+} 
+
+.img-ra{
+    width: 413px;
+    height: 390px;
+}
+
 .color1{
     background-color: #F1DDC9;
 }
+
 .color2{
     background-color: #fff;
 }
@@ -42,10 +106,14 @@ body{
 }
 .imagen{
     vertical-align: middle;
+    width: 11rem;
+    height: 9rem;
 }
+
 .info-container{
     flex: 4;
 }
+
 .hr{
     border: 1px solid black;
     width: 20px;
@@ -71,7 +139,6 @@ body{
     width: 40%;
     background-color: #F1DDC9;
     z-index: 1;
-
 }
 
 .img-banner{
