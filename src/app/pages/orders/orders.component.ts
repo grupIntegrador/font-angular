@@ -10,7 +10,7 @@ import { CarritoService } from 'src/app/services/carrito.service';
 })
 export class OrdersComponent implements OnInit {
 
-  orders!: ProductoOrders;
+    orders!: ProductoOrders;
     total!: number;
     paid!: boolean;
     sub!: Subscription;

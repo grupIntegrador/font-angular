@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 
@@ -31,6 +31,7 @@ import { PaymentComponent } from './pages/payment/payment.component';
 import { NgxStripeModule } from "ngx-stripe";
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { ModalComponent } from './pages/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
     PaymentComponent,
     ShoppingCartComponent,
     OrdersComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,8 +65,10 @@ import { OrdersComponent } from './pages/orders/orders.component';
     HttpClientModule,
     FormsModule,
     FontAwesomeModule,
+    NgbModalModule,
     NgxStripeModule.forRoot('pk_test_51Jn6ZQGynBxhAfGk7rZKOnrvvaQdoi7GLhXcAgaWkPyaAk034FCRF3zKY9Q26IH4AjuYp5Uvs40Ah2tuUyGUoXPU00LwQblDuG')
   ],
+  entryComponents:[ModalComponent],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
 })

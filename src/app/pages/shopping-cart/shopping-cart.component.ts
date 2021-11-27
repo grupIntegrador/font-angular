@@ -4,6 +4,7 @@ import { Producto } from 'src/app/models/producto';
 import { ProductoOrder } from 'src/app/models/producto-order';
 import { ProductoOrders } from 'src/app/models/producto-orders';
 import { CarritoService } from 'src/app/services/carrito.service';
+import { OrdersService } from 'src/app/services/orders.service';
 import { ProductoService } from 'src/app/services/producto.service';
 
 
@@ -33,7 +34,8 @@ export class ShoppingCartComponent implements OnInit {
 
 constructor(
   private carritoService:CarritoService,
-  private productoService:ProductoService,
+  private orderService:OrdersService
+
 
 ) { 
   this.total = 0;
@@ -84,6 +86,13 @@ finishOrder() {
   this.orderFinished = true;
   this.carritoService.Total = this.total;
   this.onOrderFinished.emit(this.orderFinished);
+
+  this.orderService.disparadorOrders.emit({
+    data:this.orders
+  })
+  this.orderService.disparadorTotal.emit({
+    data:this.total
+  })
 }
 
 loadTotal() {
