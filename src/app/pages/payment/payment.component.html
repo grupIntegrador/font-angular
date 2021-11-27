@@ -1,104 +1,77 @@
 <div class="container">
-    <main>
-      <div class="py-5 text-center">
-        <h2>Formulario de pago</h2>
-      </div>
-  
-      <div class="row g-5">
-        <div class="col-md-5 col-lg-4 order-md-last">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Your cart</span>
-            <span class="badge bg-primary rounded-pill">1</span>
-          </h4>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Product name</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">$12</span>
-            </li>
-            
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (USD)</span>
-              <strong>$20</strong>
-            </li>
-          </ul>
-  
-          
-        </div>
-        <div class="col-md-7 col-lg-8">
-          
-          <form class="needs-validation" novalidate="">
-            
-            <hr class="my-4">
-  
-            <h4 class="mb-3">Payment</h4>
-  
-            <div class="my-3">
-              <div class="form-check">
-                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
-                <label class="form-check-label" for="credit">Credit card</label>
-              </div>
-              <div class="form-check">
-                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
-                <label class="form-check-label" for="debit">Debit card</label>
-              </div>
-              <div class="form-check">
-                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
-                <label class="form-check-label" for="paypal">PayPal</label>
+  <main>
+    <div class="Titulo text text-center">
+      <h2>Formulario de pago</h2>
+    </div><br>
+    <hr>
+    <div class="row g-5">
+
+      <div class="col ms-12">
+
+        <form class="needs-validation" novalidate="">
+
+          <div class="Informacion">
+            <div class="col"><br>
+              <label for="cc-name" class="form-label">Nombre de la tarjeta</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+              <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
+              <div class="invalid-feedback">
+                Name on card is required
               </div>
             </div>
-  
-            <div class="row gy-3">
-              <div class="col-md-6">
-                <label for="cc-name" class="form-label">Name on card</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-                <small class="text-muted">Full name as displayed on card</small>
-                <div class="invalid-feedback">
-                  Name on card is required
-                </div>
-              </div>
-  
-              <div class="col-md-6">
-                <label for="cc-number" class="form-label">Credit card number</label>
+
+            <div class="col"><br>
+              <label for="cc-number" class="form-label">Direccion</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+            </div>
+            
+              <div class="col"> <br>
+
+                <label for="cc-number" class="form-label">Numero de tarjeta</label>
+
+                <div class="vissa">
                 <input type="text" class="form-control" id="cc-number" placeholder="" required="">
                 <div class="invalid-feedback">
                   Credit card number is required
                 </div>
-              </div>
-  
-              <div class="col-md-3">
-                <label for="cc-expiration" class="form-label">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                <div class="invalid-feedback">
-                  Expiration date required
-                </div>
-              </div>
-  
-              <div class="col-md-3">
-                <label for="cc-cvv" class="form-label">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                <div class="invalid-feedback">
-                  Security code required
-                </div>
+              
+              <img src="./assets/img/visa2.svg" alt=""> 
+            </div>
+            </div>
+
+          </div>
+
+          <div class="fecha">
+            <div class="col"> <br>
+              <label for="cc-expiration" class="form-label">Fecha de caducidad</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+              <div class="invalid-feedback">
+                Expiration date required
               </div>
             </div>
-  
-            <hr class="my-4">
-  
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-          </form>
-        </div>
+
+            <div class="col"> <br>
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+
+          </div>
+          <br> <br> <br>
+          <button class="btn btn-lg bn" type="submit">Continuar con el pago</button>
+        </form>
       </div>
-    </main>
-  
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">© 2021</p>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Privacy</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Support</a></li>
-      </ul>
-    </footer>
-  </div>
+    </div>
+  </main>
+
+  <footer class="text-muted text-center text-small"><br><br>
+    <p class="mb-1">© 2021</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacidad</a></li>
+      <li class="list-inline-item"><a href="#">Terminos</a></li>
+      <li class="list-inline-item"><a href="#">Soporte</a></li>
+    </ul>
+  </footer>
+</div>
