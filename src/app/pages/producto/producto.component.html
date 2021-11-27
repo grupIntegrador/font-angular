@@ -14,27 +14,35 @@
             <div class="colum1">
                 <div class="imagen">
 
-                    <img class="ImagenProducto" [src]="producto.imagenUrl" alt="...">
+                    <img class="ImagenProducto" [src]="order.producto.imagenUrl" alt="...">
 
                 </div>
             </div>
 
             <div class="colum2">
-                <h1 class="display">{{producto.nombre}}</h1>
+                <h1 class="display">{{order.producto.nombre}}</h1>
 
                 <div class="fs-5 mb-5"> <br>
-                    <span class="text-decoration-line-through">PEN {{producto.precio}} c/u</span>
+                    <span class="text-decoration-line-through">PEN {{order.producto.precio}} c/u</span>
                 </div>
 
-                <div class="Comprar">
-                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
-                        style="max-width: 3rem"> <br>
-                    <button routerLink="/payment" class="btn btn-lg bn" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Comprar
-                    </button>
-
-                </div> <br>
+ 
+                <div class="row">
+                    <div class="col-4 padding-0" *ngIf="!isProductSelected(order.producto)">
+                        <input type="number" min="0" class="form-control" 
+                            [(ngModel)]=order.quantity>
+                    </div>
+                    <div class="col-4 padding-0" *ngIf="!isProductSelected(order.producto)">
+                        <button class="btn btn-lg bn " (click)="addToCart(order)"
+                                [disabled]="order.quantity <= 0">Agregar
+                        </button>
+                    </div>
+                    <div class="col-12" *ngIf="isProductSelected(order.producto)">
+                        <button class="btn btn-lg bn btn-block"
+                                (click)="removeFromCart(order)">Quitar de carrito
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -42,7 +50,7 @@
         <h3>Detalle</h3>
         <hr> <br>
         <h5>Descripción del producto</h5> <br>
-        <p class="lead">{{producto.descripcion}}</p><br>
+        <p class="lead">{{order.producto.descripcion}}</p><br>
         <h5>Acerca de</h5><br>
         <p>Todos nuestros productos estan hechos a base de los mejores estandares de calidad del mercado PET y de toda
             la industria del prolipropileno en general.</p>

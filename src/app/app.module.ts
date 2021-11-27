@@ -29,6 +29,8 @@ import { ContactanosComponent } from './pages/contactanos/contactanos.component'
 import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { NgxStripeModule } from "ngx-stripe";
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { NgxStripeModule } from "ngx-stripe";
     ContactanosComponent,
     ConfirmacionComponent,
     PaymentComponent,
+    ShoppingCartComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,
